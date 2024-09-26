@@ -81,15 +81,6 @@ MODULE_IMPORT_NS(DMA_BUF);
 
 #define IS_CSF25(x, y) ((((x) == 2) && ((y) == 5)) ? 1 : 0)
 
-/* Unblock compilation if target does not support camnoc reg update through HYP */
-#ifndef CONFIG_SPECTRA_SECURE_CAMNOC_REG_UPDATE
-#define QCOM_SCM_CAMERA_MAX_QOS_CNT 20
-struct qcom_scm_camera_qos {
-	u32 offset;
-	u32 val;
-};
-#endif
-
 struct cam_fw_alloc_info {
 	struct device *fw_dev;
 	void          *fw_kva;
