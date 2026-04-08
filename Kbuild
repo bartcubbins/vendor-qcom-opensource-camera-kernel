@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
+ifeq ($(KERNEL_ROOT),)
+KERNEL_ROOT := $(srctree)
+endif
+
+ifeq ($(CAMERA_KERNEL_ROOT),)
+CAMERA_KERNEL_ROOT := $(KERNEL_ROOT)/techpack/camera
+endif
+
 ifeq ($(CONFIG_QCOM_CAMERA_DEBUG), y)
 $(info "CAMERA_KERNEL_ROOT is: $(CAMERA_KERNEL_ROOT)")
 $(info "KERNEL_ROOT is: $(KERNEL_ROOT)")
