@@ -83,13 +83,13 @@ LINUXINCLUDE +=                                 \
 	-I$(CAMERA_KERNEL_ROOT)/include/uapi/camera \
 	-I$(CAMERA_KERNEL_ROOT)/
 # Optional include directories
-SYNXVENDORDIR=$(CAMERA_KERNEL_ROOT)/../synx-kernel
+SYNXVENDORDIR=$(CAMERA_KERNEL_ROOT)/../synx
 ccflags-$(CONFIG_MSM_GLOBAL_SYNX) += -I$(KERNEL_ROOT)/drivers/media/platform/msm/synx
 ccflags-$(TARGET_SYNX_ENABLE) += -I$(SYNXVENDORDIR)/include/uapi/synx/media
 ccflags-$(TARGET_SYNX_ENABLE) += -I$(SYNXVENDORDIR)/msm/synx
 ccflags-$(TARGET_SYNX_ENABLE) += -DCONFIG_TARGET_SYNX_ENABLE=1
-ccflags-y += -I$(CAMERA_KERNEL_ROOT)/../securemsm-kernel/
-ccflags-y += -I$(CAMERA_KERNEL_ROOT)/../securemsm-kernel/include/
+ccflags-y += -I$(CAMERA_KERNEL_ROOT)/../securemsm/
+ccflags-y += -I$(CAMERA_KERNEL_ROOT)/../securemsm/include/
 
 # After creating lists, add content of 'ccflags-m' variable to 'ccflags-y' one.
 ccflags-y += ${ccflags-m}
