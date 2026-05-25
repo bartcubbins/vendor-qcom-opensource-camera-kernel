@@ -327,5 +327,5 @@ camera-$(CONFIG_SPECTRA_VMRM) += \
 
 camera-y += drivers/camera_main.o
 
-obj-m += camera.o
+obj-$(CONFIG_QCOM_CAMERA) += camera.o
 BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/camera.ko

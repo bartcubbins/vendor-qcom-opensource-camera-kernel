@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 # Localized KCONFIG settings
+CONFIG_QCOM_CAMERA := y
 CONFIG_SPECTRA_ISP := y
 CONFIG_SPECTRA_ICP := y
 CONFIG_SPECTRA_JPEG := y
@@ -14,6 +15,7 @@ CONFIG_SECURE_CAMERA_25 := y
 CONFIG_SPECTRA_SECURE_CAMNOC_REG_UPDATE := y
 
 # Flags to pass into C preprocessor
+ccflags-y += -DCONFIG_QCOM_CAMERA=1
 ccflags-y += -DCONFIG_SPECTRA_ISP=1
 ccflags-y += -DCONFIG_SPECTRA_ICP=1
 ccflags-y += -DCONFIG_SPECTRA_JPEG=1
